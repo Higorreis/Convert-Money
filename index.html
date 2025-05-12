@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Convert Money</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-main">
+        <img class="image-logo" src="./assets/img/logo gif.gif" alt="logo-convert_money">
+        <main class="main">
+
+            <div class="currency">
+                <label class="label" for="">Converter <b>de</b></label>
+                <select class="select" name="" id="">
+                    <option value="">R$ Real brasileiro</option>
+                </select>
+            </div>
+
+            <div class="currency">
+                <label class="label" for="">Converter <b>para</b></label>
+                <select class="select" name="" id="select">
+                    <option class="option" value="USD" id="dolar">US$ Dolár americano</option>
+                    <option class="option" value="EUR" id="euro">€ Euro </option>
+                    <option class="option" value="LIB" id="libra">£ Libra</option>
+                    <option class="option" value="BIT" id="Bitcoin">₿ Bitcoin</option>
+                </select>
+            </div>
+
+            <div class="currency">
+                <label  class="label" for=""> <b>Valor</b> </label>
+                <input id="value" type="number" placeholder="R$ 10.000,00">
+            </div>
+
+            <button id="button" class="button">converter</button>
+
+            <section class="section">
+                
+                    <div class="brazil">
+                        <img class="icone" src="./assets/img/Logo Brasil.png" alt="logo-currency-brazil">
+                        <p class="paragraph-one" id="brazil-paragraph">Real</p>
+                        <p class="value-flags" id="brazil-value">R$ 0,00</p>
+                    </div>
+                    <div class="vector">
+                        <img src="./assets/img/arrow.png" alt="">
+                    </div>
+                    <div class="foreigner">
+                        <img id="icone" class="icone"  src="./assets/img/Logo USA.png" alt="foreign-currency-logo">
+                        <p class="paragraph-one" id="foreigner-paragraph">Dolár amerciano</p>
+                        <p class="value-flags" id="foreigner-value">US$ 0.00</p>
+                    </div>
+              
+            </section>
+
+        </main>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
