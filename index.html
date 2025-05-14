@@ -21,14 +21,17 @@
 
             <div class="currency">
                 <label class="label" for="">Converter <b>de</b></label>
-                <select class="select" name="" id="">
-                    <option value="">R$ Real brasileiro</option>
+                <select class="select" name="" id="primary-select">
+                    <option class="option" value="BRL" id="brazil">R$ Real brasileiro</option>
+                    <option class="option" value="USD" id="dolar">US$ Dolár americano</option>
+                    <option class="option" value="EUR" id="euro">€ Euro </option>
                 </select>
             </div>
 
             <div class="currency">
                 <label class="label" for="">Converter <b>para</b></label>
-                <select class="select" name="" id="select">
+                <select class="select" name="" id="second-select">
+                    <option class="option" value="BRL" id="real">R$ Real brasileiro</option>
                     <option class="option" value="USD" id="dolar">US$ Dolár americano</option>
                     <option class="option" value="EUR" id="euro">€ Euro </option>
                     <option class="option" value="LIB" id="libra">£ Libra</option>
@@ -46,17 +49,17 @@
             <section class="section">
 
                 <div class="brazil">
-                    <img class="icone" src="./assets/img/Logo Brasil.png" alt="logo-currency-brazil">
-                    <p class="paragraph-one" id="brazil-paragraph">Real</p>
-                    <p class="value-flags" id="brazil-value">R$ 0,00</p>
+                    <img id="icone-one" class="icone" src="./assets/img/Logo Brasil.png" alt="logo-currency-brazil">
+                    <p class="paragraph-one" id="primary-paragraph">Real</p>
+                    <p class="value-flags" id="value-converts-it">R$ 0,00</p>
                 </div>
                 <div class="vector">
                     <img src="./assets/img/arrow.png" alt="">
                 </div>
                 <div class="foreigner">
-                    <img id="icone" class="icone" src="./assets/img/Logo USA.png" alt="foreign-currency-logo">
-                    <p class="paragraph-one" id="foreigner-paragraph">Dolár amerciano</p>
-                    <p class="value-flags" id="foreigner-value">US$ 0.00</p>
+                    <img id="icone" class="icone" src="./assets/img/Logo Brasil.png" alt="foreign-currency-logo">
+                    <p class="paragraph-one" id="foreigner-paragraph">Real</p>
+                    <p class="value-flags" id="foreigner-value">R$ 0,00</p>
                 </div>
 
             </section>
