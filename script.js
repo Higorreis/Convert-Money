@@ -1,5 +1,5 @@
 //Function para Converter Valores
-function convertsValues() {
+async function convertsValues() {
     //Valor digitado pelo usuário
     const enteredValue = document.querySelector("#value")
     //Trasformando em Float
@@ -9,6 +9,9 @@ function convertsValues() {
     //Valor Estrangeiro
     const foreignerValue = document.querySelector("#foreigner-value")
 
+    //Fetch
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(res => res.json())
+    console.log(data);
 
     //Try- Catch
     try {
@@ -35,7 +38,7 @@ function convertsValues() {
                     foreignerValue.innerHTML = new Intl.NumberFormat('en-US', {
                         style: 'currency',
                         currency: 'USD'
-                    }).format(enteredValue.value / 5.65)
+                    }).format(enteredValue.value / data.USDBRL.high)
                     //Mostrar valor Estrangeiro Formatado
                 }
                 //Condição para EURO
@@ -43,7 +46,7 @@ function convertsValues() {
                     foreignerValue.innerHTML = new Intl.NumberFormat('de-DE', {
                         style: 'currency',
                         currency: 'EUR'
-                    }).format(enteredValue.value / 6.37)
+                    }).format(enteredValue.value /data.EURBRL.high)
                 }
 
                 //Condição para Libra
@@ -61,7 +64,7 @@ function convertsValues() {
                         style: 'decimal',
                         minimumFractionDigits: 8,
                         maximumFractionDigits: 8
-                    }).format(enteredValue.value / 581.494, 51)
+                    }).format(enteredValue.value / data.BTCBRL.high)
                 }
             }
             if (primarySelect.value === "USD") {
